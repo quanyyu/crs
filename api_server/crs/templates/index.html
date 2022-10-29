@@ -1,0 +1,33 @@
+<html>
+    <div>{{gg}}</div>
+    <div id="root">
+    </div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/antd/4.23.6/antd.min.js" integrity="sha512-ruHjWmff9nnuoGfsY9t1Er8XIqo/ZMb7t2Cqr00EH63W4QOQ++WVvIbrKQDgWiVTqvF8ttCrQK06PbgdczrFUA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.23.6/antd.min.css" integrity="sha512-sW/jMkhvDkONfSzl8fwaI+LaZhvXKDZ3uMvfhMPEwoqN/ASLEg8t7ZkUworlAYXqgBACEtlpMRoe+SkiyAwruw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script type="text/babel">
+        class Button extends React.Component {
+            constructor(props) {
+                super(props)
+                this.state = {
+                    count: 0
+                }
+            }
+
+            render() {
+                return (
+                    <div>
+                        <button onClick={() => this.setState({count: this.state.count + 1})}>{this.state.count}</button>    
+                    </div>
+                )
+            }
+        }
+        const dRoot = document.querySelector('#root')
+        const root = ReactDOM.createRoot(dRoot)
+        root.render(React.createElement(antd.Button))
+    </script>
+</html

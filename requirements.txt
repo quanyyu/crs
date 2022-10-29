@@ -1,0 +1,7 @@
+Scrapy==2.6.3
+redis==4.3.4
+lxml==4.9.1
+aioredis==2.0.1
+Django==4.1.2
+PyMySQL==1.0.2
+pydub==0.25.1
